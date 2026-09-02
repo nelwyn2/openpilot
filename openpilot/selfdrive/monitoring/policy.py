@@ -28,19 +28,19 @@ class DRIVER_MONITOR_SETTINGS:
     # https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202501899
     self._ALERT_MIN_SPEED = 2.8  # 10 km/h
 
-    self._WHEELTOUCH_POLICY_ALERT_1_TIMEOUT = 5.
-    self._WHEELTOUCH_POLICY_ALERT_2_TIMEOUT = 15.
-    self._WHEELTOUCH_POLICY_ALERT_3_TIMEOUT = 25.
-    self._VISION_POLICY_ALERT_1_TIMEOUT = 5.
-    self._VISION_POLICY_ALERT_2_TIMEOUT = 8.
-    self._VISION_POLICY_ALERT_3_TIMEOUT = 13.
+    self._WHEELTOUCH_POLICY_ALERT_1_TIMEOUT = 75.
+    self._WHEELTOUCH_POLICY_ALERT_2_TIMEOUT = 125.
+    self._WHEELTOUCH_POLICY_ALERT_3_TIMEOUT = 150.
+    self._VISION_POLICY_ALERT_1_TIMEOUT = 15.
+    self._VISION_POLICY_ALERT_2_TIMEOUT = 25.
+    self._VISION_POLICY_ALERT_3_TIMEOUT = 55.
 
     # no response = alert_3 sustained for certain amount of time
     self._NO_RESPONSE_TIMEOUT = 5.
 
     # lockout specs
-    self._MAX_ALERT_3 = 2
-    self._MAX_NO_RESPONSE = 1
+    self._MAX_ALERT_3 = 3
+    self._MAX_NO_RESPONSE = 3
     self._LOCKOUT_TIMES = [int(60 * n_min / DT_DMON) for n_min in [1, 5, 15, 30]]
 
     self._TIMEOUT_RECOVERY_FACTOR_MAX = 5.
@@ -51,11 +51,11 @@ class DRIVER_MONITOR_SETTINGS:
     self._SG_THRESHOLD = 0.9
     self._BLINK_THRESHOLD = 0.865
     self._PHONE_THRESH = 0.5
-    self._POSE_PITCH_THRESHOLD = 0.3133
-    self._POSE_PITCH_THRESHOLD_SLACK = 0.3237
+    self._POSE_PITCH_THRESHOLD = 1.5
+    self._POSE_PITCH_THRESHOLD_SLACK = 1.6
     self._POSE_PITCH_THRESHOLD_STRICT = self._POSE_PITCH_THRESHOLD
-    self._POSE_YAW_THRESHOLD = 0.4020
-    self._POSE_YAW_THRESHOLD_SLACK = 0.5042
+    self._POSE_YAW_THRESHOLD = 2
+    self._POSE_YAW_THRESHOLD_SLACK = 1.6
     self._POSE_YAW_THRESHOLD_STRICT = self._POSE_YAW_THRESHOLD
     self._POSE_YAW_MIN_STEER_DEG = 30
     self._POSE_YAW_STEER_FACTOR = 0.15
